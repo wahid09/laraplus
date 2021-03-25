@@ -1,0 +1,26 @@
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import HomepageComponent from './pages/frontend/HomepageComponent'
+import About from './pages/frontend/About'
+
+Vue.use(VueRouter)
+
+
+const routes = [{
+        path: '/',
+        name: 'Home',
+        component: HomepageComponent
+    },
+    {
+        path: '/about',
+        component: About
+
+    },
+]
+
+
+const router = new VueRouter({
+    // mode: 'history',
+    routes // short for `routes: routes`
+})
+export default router
